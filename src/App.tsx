@@ -1,8 +1,8 @@
 import "./App.css";
-import UserBoard from "./components/UserBoard";
+import ContactForm from "./components/ContactForm";
 
 function App() {
-  return <UserBoard />;
+  return <ContactForm />;
 }
 
 export default App;
