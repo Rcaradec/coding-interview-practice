@@ -1,8 +1,8 @@
 import "./App.css";
-import ContactForm from "./components/ContactForm";
+import SearchInput from "./components/SearchInput";
 
 function App() {
-  return <ContactForm />;
+  return <SearchInput />;
 }
 
 export default App;
