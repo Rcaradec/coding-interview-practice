@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import AuthContext from "../../context/AuthContext";
 
 interface WithAuthenticationProps {
   component: React.ReactNode;
-  isAuthenticate: boolean;
 }
-const WithAuthentication = ({
-  component,
-  isAuthenticate,
-}: WithAuthenticationProps) => {
+const WithAuthentication = ({ component }: WithAuthenticationProps) => {
+  const authContext = useContext(AuthContext);
+
+  if (!authContext) {
+    return <h1>Context not provided</h1>;
+  }
+
+  const { isAuthenticate } = authContext;
   return (
     <>
       {!isAuthenticate ? (
